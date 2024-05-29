@@ -10,10 +10,7 @@ if (!isset($_SESSION['username'])) {
 ?>
         <!-- Content -->
         <?php 
-        if (isset($_GET['x']) && $_GET['x']=='home') {
-          $page = "home.php";
-          include 'main.php';
-        }else if (isset($_GET['x']) && $_GET['x']=='order') {
+        if (isset($_GET['x']) && $_GET['x']=='order') {
           $page = "order.php";
           include 'main.php';
         }else if (isset($_GET['x']) && $_GET['x']=='product') {
@@ -28,6 +25,7 @@ if (!isset($_SESSION['username'])) {
         }else if (isset($_GET['x']) && $_GET['x']=='login') {
           include 'login.php';
         }else{
+          $page = "home.php";
           include 'main.php';
         }
         ?>
